@@ -13,13 +13,14 @@ RUN pip install pandas
 
 #install npc2batman
 RUN pip install git+https://github.com/jianlianggao/npc2batman.git
-#ADD npc2batman.sh /usr/local/bin
-ADD npc2batman.sh /
-#RUN chmod +x /usr/local/bin/npc2batman.sh
-#RUN chmod +x /usr/local/bin/npc2batman.py
+ADD npc2batman.sh /usr/local/bin
+#ADD npc2batman.sh /
+RUN chmod +x /usr/local/bin/npc2batman.sh
+RUN chmod +x /usr/local/bin/npc2batman.py
 #WORKDIR /usr/src/npc2batman
 #RUN cp /usr/local/bin/npc2batman.sh /usr/src/npc2batman
-RUN chmod +x ./npc2batman.sh
-RUN cp /usr/local/bin/npc2batman.py /
+#RUN chmod +x ./npc2batman.sh
+#RUN cp /usr/local/bin/npc2batman.py /
+#RUN chmod +x ./npc2batman.py
 
-ENTRYPOINT ["./npc2batman.sh"]
+ENTRYPOINT ["npc2batman.sh"]
