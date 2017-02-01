@@ -7,12 +7,12 @@ ENV CONTAINER_VERSION=1.0
 LABEL tool_version="${TOOL_VERSION}"
 LABEL version="${CONTAINER_VERSION}"
 
-RUN apt-get -y update && apt-get -y install git python-dev python-tk python-pip wget
-RUN pip install --upgrade pip
-RUN pip install pandas
+RUN apt-get -y update && apt-get -y install git python3 python3-dev python3-tk python3-pip wget
+RUN pip3 install --upgrade pip
+RUN pip3 install pandas
 
 #install npc2batman
-RUN pip install git+https://github.com/jianlianggao/npc2batman.git
+RUN pip3 install git+https://github.com/jianlianggao/npc2batman.git
 ADD npc2batman.sh /usr/local/bin
 #ADD npc2batman.sh /
 RUN chmod +x /usr/local/bin/npc2batman.sh
