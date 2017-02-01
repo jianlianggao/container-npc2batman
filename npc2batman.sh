@@ -18,4 +18,4 @@ if [ -z "$2" ]
      exit 1
 fi
 
-./npc2batman.py $1 $2
+npc2batman.py $1 $2
