@@ -10,6 +10,7 @@ WORKDIR /usr/src
 RUN pip install git+https://github.com/jianlianggao/npc2batman.git
 ADD npc2batman.sh /usr/local/bin
 RUN chmod +x /usr/local/bin/npc2batman.sh
+RUN chmod +x /usr/local/bin/npc2batman.py
 WORKDIR /usr/src/npc2batman
 RUN cp /usr/local/bin/npc2batman.sh /usr/src/npc2batman
 RUN chmod +x ./npc2batman.sh
